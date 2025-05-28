@@ -1,1 +1,1 @@
-# handsomegenius.github.io
+# allThumbsgenius.github.io
