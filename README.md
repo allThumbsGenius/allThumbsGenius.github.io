@@ -1,1 +1,1 @@
-# HandsomeGenius.github.io
+# handsomegenius.github.io
