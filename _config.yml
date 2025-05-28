@@ -1,65 +1,89 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      rouge
+title:            Site Title
+description:      Describe your website here.
+disqus_shortname: 
+reading_time:     true
+words_per_minute: 200
+# Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
+# When testing locally leave blank or use http://localhost:4000
+url:
 
-# Setup
-title:            Hydeout
-tagline:          'A Jekyll theme'
-description:      'The <a href="http://hyde.getpoole.com" target="_blank">Hyde</a> theme for <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, refreshed.'
-url:              https://fongandrew.github.io
-baseurl:          '/hydeout'
-                  # the optional subpath of your site, e.g. "/blog"
-                  # NB: This applies to all pages in your Jekyll site.
-                  # If you want to move just the blog index pages but keep
-                  # other pages at root, see the paginate_path and
-                  # sidebar_blog_link below.
+# Owner/author information
+owner:
+  name:           Your Name
+  avatar:         avatar.jpg
+  bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
+  email:          you@email.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        
+  facebook:       
+  github:         
+  stackexchange:  
+  linkedin:       
+  instagram:      
+  flickr:         
+  tumblr:         
+  # google plus id, include the '+', eg +mmistakes
+  google_plus:
 
-author:
-  name:           'Andrew Fong'
-  url:            https://twitter.com/fongandrewc
+# Background image to be tiled on all pages
+background: 
 
-paginate:         5
-# paginate_path:    '/page:num'
-                    # Or '/blog/page:num' if you want to move your index pages
+# Analytics and webmaster tools stuff goes here
+google_analytics:   
+google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:         
 
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+future:      false  # publish future dated posts --  true, false (default) 
+highlighter: rouge
+markdown:    kramdown
 plugins:
-  - jekyll-feed
-  - jekyll-gist
+  - jekyll-sitemap
   - jekyll-paginate
-  - jekyll-include-cache
-  - jemoji
+  - jekyll-gist
+  - jekyll-feed
+sass:
+  sass_dir: _sass
+  style: compressed
 
-exclude:
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
+
+# Amount of post to show on home page
+paginate: 5
+
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+include: 
+  - .htaccess
+exclude: 
+  - "*.less"
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - CHANGELOG
+  - Capfile
   - Gemfile
-  - Gemfile.lock
-  - Makefile
-  - README.md
-  - .gitignore
-
-permalink:        /:year/:month/:day/:title.html
-
-defaults:
-  - scope:
-      path: "_posts"
-      type: "posts"
-    values:
-      excerpt_separator:  <!--more-->
-      layout: post
-
-# Sidebar link settings
-sidebar_home_link:  true
-# sidebar_blog_link:  '/blog'   # By default, your home page is your blog
-                                # page. If you change your paginate_path,
-                                # set this to the root of the paginate_path
-                                # to enable a separate blog link.
-
-disqus:
-  shortname:      hydeout
-
-google_analytics: UA-100461102-1
-
-# Used for Hydeout's own Github page. Feel free to remove for your
-# own fork.
-hydeout:
-  version:          5.0.2
-  repo:             https://github.com/fongandrew/hydeout
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - Rakefile
+  - config
+  - gulpfile.js
+  - lib
+  - log
+  - node_modules
+  - package.json
+  - spec
+  - tmp
